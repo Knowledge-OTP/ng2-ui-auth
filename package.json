@@ -22,7 +22,7 @@
     "url": "https://github.com/ronzeidman/ng2-ui-auth/issues"
   },
   "files": [
-    "dist/*"
+    "dist"
   ],
   "homepage": "https://github.com/ronzeidman/ng2-ui-auth#readme",
   "peerDependencies": {
