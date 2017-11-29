@@ -19,9 +19,9 @@ export class OauthService {
                 private injector: Injector,
                 private shared: SharedService,
                 private config: ConfigService) {}
-    authenticate(name: string, userData?: any): Observable<Response> {
+    authenticate(name: string, userData?: any, oauth?: any): Observable<Response> {
         // var injector = Injector.resolveAndCreate([Oauth1, Oauth2]);
-        const provider: { open(options?: any, userData?: any): Observable<any> } = this.config.providers[name].oauthType === '1.0' ? this.injector.get(Oauth1Service) : this.injector.get(Oauth2Service);
+        const provider: { open(options?: any, userData?: any): Observable<any> } = this.config.providers[name].oauthType === '1.0' ? this.injector.get(Oauth1Service) : oauth;
         return provider.open(this.config.providers[name], userData || {})
             .do((response: Response) => {
                 // this is for a scenario when someone wishes to opt out from

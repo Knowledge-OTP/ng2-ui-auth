@@ -28,8 +28,8 @@ export class AuthService {
         return this.shared.logout();
     }
 
-    authenticate(name: string, userData?: any): Observable<Response> {
-        return this.oauth.authenticate(name, userData);
+    authenticate(name: string, userData?: any, oauth?: any): Observable<Response> {
+        return this.oauth.authenticate(name, userData, oauth);
     }
 
     link(name: string, userData?: any): Observable<Response> {
