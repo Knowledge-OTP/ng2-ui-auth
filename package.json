@@ -21,9 +21,6 @@
   "bugs": {
     "url": "https://github.com/ronzeidman/ng2-ui-auth/issues"
   },
-  "files": [
-    "dist"
-  ],
   "homepage": "https://github.com/ronzeidman/ng2-ui-auth#readme",
   "peerDependencies": {
     "@angular/http": "4.x",
